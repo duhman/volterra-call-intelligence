@@ -1,11 +1,34 @@
 # Volterra Call Intelligence
 
-> AI-powered call intelligence platform that transcribes sales calls, analyzes conversations, and syncs insights directly into HubSpot CRM.
+> Sales reps were losing deal context from calls -- no systematic capture, no structured analysis, managers blind to pipeline health beyond manual CRM logs. This platform auto-transcribes every call and extracts actionable signals directly into HubSpot.
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![React](https://img.shields.io/badge/React-19-61DAFB)
 ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E)
+
+## The Problem
+
+In a high-velocity B2B sales cycle, reps made dozens of calls daily with no systematic capture. Deal context lived in reps' heads or scattered CRM notes. Managers had no visibility into pipeline health beyond what reps manually logged -- no way to spot deals going cold, competitive threats surfacing, or coaching opportunities.
+
+## What This Does
+
+- **Automatic transcription** -- PBX webhooks trigger recording retrieval and AI transcription via ElevenLabs, with no manual steps
+- **NLP analysis (5 signal types)** -- Extracts deal stage indicators, sentiment shifts, action items, competitive mentions, and objection patterns from every conversation
+- **CRM sync with embedded cards** -- Pushes structured insights to HubSpot deal records; custom CRM card surfaces call intelligence directly in the rep's workflow
+
+## Impact
+
+| Metric              | Detail                                                   |
+| ------------------- | -------------------------------------------------------- |
+| Manual call logging | Eliminated -- every call auto-transcribed and analyzed   |
+| Signal extraction   | 5 structured signal types from each conversation         |
+| Pipeline visibility | Real-time dashboard with Supabase Realtime subscriptions |
+| Compliance          | Slack-based consent workflow for recording authorization |
+
+## Part of the Volterra Platform
+
+Call Intelligence feeds conversation data into the [Knowledge Engine](../volterra-knowledge-engine/) for cross-system search, and leverages deal context from the [Semantic Platform](../volterra-semantic-platform/) to enrich analysis.
 
 ## Architecture
 
